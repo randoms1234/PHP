@@ -6,13 +6,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   header("location: login.php");
   exit;
 }
-$host="localhost";
-  $username="root";
-  $password="";
-  $databasename="login";
 
-  $connect=mysqli_connect($host,$username,$password);//connects to the database
-  $db=mysqli_select_db($connect,$databasename);//selects the login database
   $username = $_SESSION['username'];
   $html = ".html"; 
   $name = $username . $html;
@@ -21,7 +15,6 @@ $host="localhost";
   if(file_exists($username)){
   }
   else{
-  	mkdir($username, 0700);
   	 if(file_exists($name)){
   	}
   	else{
@@ -54,7 +47,7 @@ if (isset($_POST['text'])) {
 <a href="delpage.php" class="btn btn-danger">Delete the webpage</a>
 <br>
 <br>
-<a href="<?php echo $name ?>" class="btn btn-primary">View the webpage</a>
+<a href="<?php echo $name2 ?>" class="btn btn-primary">View the webpage</a>
 </body>
 
   

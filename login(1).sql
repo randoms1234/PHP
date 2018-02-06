@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 06, 2018 at 06:48 PM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- Host: localhost:3306
+-- Generation Time: Feb 06, 2018 at 09:52 PM
+-- Server version: 5.7.21-0ubuntu0.17.10.1
+-- PHP Version: 7.1.11-0ubuntu0.17.10.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,7 +40,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `visits`, `lastvisit`, `created_at`) VALUES
-(1, 'Admin', '$2y$10$OsS8ZgZ45.Fv9EBAv.lXdOfDzGNZerIsgvBx.F4g8S.bzD7o0JR1C', '44', 'Tue, 06 Feb 2018 17:20:42 +0000', '2018-01-16 16:38:03'),
+(1, 'Admin', '$2y$10$OsS8ZgZ45.Fv9EBAv.lXdOfDzGNZerIsgvBx.F4g8S.bzD7o0JR1C', '46', 'Tue, 06 Feb 2018 21:46:45 +0000', '2018-01-16 16:38:03'),
 (4, 'xXxnoScoperxXx', '$2a$12$IXmQ/qI3BHNFWxoTyyWyeeJuvh2oUxjGAnvs44sq0MvKd9HqLSODu', '0', '0', '2018-01-16 17:54:26'),
 (5, 'that_fly_on_the_wall', '$2y$10$fTXv4BYMI5/lOItQo3XEVecRSSHn5BHz0h32.pMWYz6ocKESEJi72', '0', '0', '2018-01-16 17:56:35'),
 (6, 'xXxMLGNOSCOPExXx', '$2y$10$f/q6Z8.1CVtoCT8C7bV24ufIrPeKloEmkbqaTMN4kPNh.Shv5CNKm', '20', '0', '2018-01-23 17:30:24'),
@@ -70,9 +68,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-COMMIT;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

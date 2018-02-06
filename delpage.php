@@ -6,13 +6,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   header("location: login.php");
   exit;
 }
-$host="localhost";
-  $username="root";
-  $password="";
-  $databasename="login";
-
-  $connect=mysqli_connect($host,$username,$password);//connects to the database
-  $db=mysqli_select_db($connect,$databasename);//selects the login database
   $username = $_SESSION['username'];
   $html = ".html";
   $folder = "./$username/";

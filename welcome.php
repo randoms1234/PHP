@@ -13,7 +13,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 	error_reporting(E_ALL);
   $host="localhost";
   $username="root";
-  $password="";
+  $password="randoms....";
   $databasename="login";
 
   $connect=mysqli_connect($host,$username,$password);//connects to the database

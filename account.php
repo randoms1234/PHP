@@ -8,7 +8,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 }
 $host="localhost";
 $username="root";
-$password="";
+$password="randoms....";
 $databasename="login";
 
 $connect=mysqli_connect($host,$username,$password);//connects to the database
@@ -16,13 +16,16 @@ $db=mysqli_select_db($connect,$databasename);//selects the login database
 $username = $_SESSION['username'];
 $time = mysqli_fetch_row(mysqli_query($connect, "SELECT `lastvisit` FROM `users` WHERE username = '$username'"));
 $first = mysqli_fetch_row(mysqli_query($connect, "SELECT `created_at` FROM `users` WHERE username = '$username'"));
+$folder = "./$username/";
+$userimage = "$username" . ".jpg";
+$image = $folder . $userimage;
+if(file_exists($image)){
 
-if($username == "SirGeoffreyLaman"){
-		$image = "lamana.jpg";
-	}
-	else{
-		$image = "";
-	}
+}
+else{
+	$image = "";
+}
+
 ?>
 <html>
 <head>
@@ -43,6 +46,10 @@ if($username == "SirGeoffreyLaman"){
 <a href="welcome.php" class="btn btn-primary">Home</a>
 <a href="delete.php" class="btn btn-danger">Delete Account</a>
 <br>
+<form enctype="multipart/form-data" method="post" action="profupload.php">
+Send this file:<input name="userfile" type="file"/><br/>
+<input type="submit" value="Upload Profile picture"/>
+</form>
 <img src="<?php echo $image ?>">
 </body>
 </html>

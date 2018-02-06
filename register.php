@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, visits) VALUES (?, ?, 0)";
+        $sql = "INSERT INTO users (username, password, visits, lastvisit) VALUES (?, ?, 0, 0)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -77,6 +77,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
+                $perm = "./" . $username;
+                mkdir($username, 0777);
+                chmod($perm, 0777);
                 // Redirect to login page
                 header("location: welcome.php");
             } else{
