@@ -17,7 +17,12 @@ $username = $_SESSION['username'];
 $time = mysqli_fetch_row(mysqli_query($connect, "SELECT `lastvisit` FROM `users` WHERE username = '$username'"));
 $first = mysqli_fetch_row(mysqli_query($connect, "SELECT `created_at` FROM `users` WHERE username = '$username'"));
 
-
+if($username == "SirGeoffreyLaman"){
+		$image = "lamana.jpg";
+	}
+	else{
+		$image = "";
+	}
 ?>
 <html>
 <head>
@@ -31,10 +36,13 @@ $first = mysqli_fetch_row(mysqli_query($connect, "SELECT `created_at` FROM `user
 		}
     </style>
 <body>
+
 <p>Account Name: <?php echo $_SESSION['username'];?></p>
 <p>Joined us: <?php echo $first[0];?></p>
 <p>Last Logged in : <?php echo $time[0];?></p>
 <a href="welcome.php" class="btn btn-primary">Home</a>
 <a href="delete.php" class="btn btn-danger">Delete Account</a>
+<br>
+<img src="<?php echo $image ?>">
 </body>
 </html>

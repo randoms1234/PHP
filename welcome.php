@@ -44,9 +44,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 		$good = "";
   	}
 
-
-  	//use config.php
-  	//use github
+  	//profile picture
 ?>
 
 <!DOCTYPE html>
