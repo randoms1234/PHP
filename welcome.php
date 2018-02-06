@@ -83,6 +83,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 <p>you have visited this page <?php echo $visits[0]; ?> times</p>
 	<a href="webupload2.php" class="btn btn-primary">upload</a>
 	<a href="webedit.php" class="btn btn-primary">edit webpage</a>
+	<a href="uploadtest.php" class="btn btn-primary">upload to the server</a>
 	<hr>
 	<a href="account.php" class="btn btn-primary">Account Information</a>
     <a href="logout.php" class="btn btn-primary">Sign Out</a>

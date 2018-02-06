@@ -14,21 +14,18 @@ $databasename="login";
 $connect=mysqli_connect($host,$username,$password);//connects to the database
 $db=mysqli_select_db($connect,$databasename);//selects the login database
 $username = $_SESSION['username'];
-if($username == "goodmondson"){
+$folder = "./$username/";
+$delete = mysqli_query($connect, "DELETE FROM `users` WHERE username = '$username'");
+mysqli_query($connect, "DELETE FROM `time` WHERE username = '$username'");
+rmdir($folder);
+// Unset all of the session variables
+$_SESSION = array();
 
-	$delete = mysqli_query($connect, "DELETE FROM `users` WHERE username = '$username'");
-	mysqli_query($connect, "DELETE FROM `time` WHERE username = '$username'");
-	// Unset all of the session variables
-	$_SESSION = array();
- 
 // Destroy the session.
 session_destroy();
 header("location: login.php");
-}
-else{
-	echo "you cannot delete a GOD my dude";
 
-}
+
 ?>
 <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <style type="text/css">
