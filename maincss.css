@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.time{
+	margin-top: 12px;
+	margin-left: 27px;
+	font-size: 20px;
+	color: #555;
+}
+
+.date{
+	margin-top: 12px;
+	margin-left: 40px;
+	font-size: 20px;
+	color: #555;
+}
+
+.button1:hover{/*colour for soviet button*/
+	border-radius: 4px;
+	background-color: red;
+	-webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+}
+
+.button2:hover{/*colour for american button*/
+	border-radius: 4px;
+	background-color: skyblue;
+	-webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+}
+
+.button3:hover{/*colour for contactus button*/
+	border-radius: 4px;
+	background-color: darkgray;
+	-webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+}
+
+.Atitle{
+	font-size: 35px;
+	font-family: "impact";
+}
+.jumbotron{
+	background-size:cover;
+}
