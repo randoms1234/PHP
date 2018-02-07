@@ -19,9 +19,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   $connect=mysqli_connect($host,$username,$password);//connects to the database
   $db=mysqli_select_db($connect,$databasename);//selects the login database
  	$username = $_SESSION['username'];//gets the username from the session
-	$sql = "UPDATE `users` SET `visits`= visits + 1 WHERE username = '$username'";// adds one view everytime a user opens the page
-	mysqli_query($connect, $sql);
-
 	$sq = "SELECT `visits` FROM `users` WHERE username = '$username'";
 	$visits = mysqli_fetch_row(mysqli_query($connect, $sq));//grabs the number of times the user has visited the page
 
@@ -80,8 +77,8 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 	
 	
 
-<p>you have visited this page <?php echo $visits[0]; ?> times</p>
-	<a href="webupload2.php" class="btn btn-primary">upload</a>
+<p>you have logged in <?php echo $visits[0]; ?> times</p>
+	<a href="webupload2.php" class="btn btn-primary">upload a Webpage</a>
 	<a href="webedit.php" class="btn btn-primary">edit webpage</a>
 	<a href="uploadtest.php" class="btn btn-primary">upload to the server</a>
 	<hr>

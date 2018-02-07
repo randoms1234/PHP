@@ -19,11 +19,21 @@ $first = mysqli_fetch_row(mysqli_query($connect, "SELECT `created_at` FROM `user
 $folder = "./$username/";
 $userimage = "$username" . ".jpg";
 $image = $folder . $userimage;
+
 if(file_exists($image)){
 
 }
 else{
 	$image = "";
+}
+if($username == "Admin"){
+	$button = "#";
+}
+elseif($username == "Gudmondson"){
+	$button = "#";
+}
+else{
+	$button = "delete.php";
 }
 
 ?>
@@ -44,7 +54,7 @@ else{
 <p>Joined us: <?php echo $first[0];?></p>
 <p>Last Logged in : <?php echo $time[0];?></p>
 <a href="welcome.php" class="btn btn-primary">Home</a>
-<a href="delete.php" class="btn btn-danger">Delete Account</a>
+<a href="<?php echo $button ?>" class="btn btn-danger">Delete Account</a>
 <br>
 <form enctype="multipart/form-data" method="post" action="profupload.php">
 Send this file:<input name="userfile" type="file"/><br/>

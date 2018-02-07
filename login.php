@@ -58,6 +58,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $tim = gmdate("r", $date);
                             $time = "UPDATE `users` SET `lastvisit`= '$tim' WHERE username = '$username'";
                             mysqli_query($link, $time);
+                            $sql = "UPDATE `users` SET `visits`= visits + 1 WHERE username = '$username'";// adds one view everytime a user opens the page
+                            mysqli_query($link, $sql);
                                 
                             header("location: welcome.php");
                         } else{

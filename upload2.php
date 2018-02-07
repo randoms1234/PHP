@@ -19,5 +19,25 @@ $username = $_SESSION['username'];
 	}
 
 ?>
+<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <style type="text/css">
+        body{ font: 14px sans-serif; text-align: center; 
+			background-color: #324D5C;
+			color: white;
+		}
+		.pigeon{
+			height:600px;
+			width:1000px;
+		}
+		.goose{
+			height: 150px;
+			width: 300px;
+		}
+		.page-header{
+			color: white;
+		}
+    </style>
+<body>
 <br>
-<a href="welcome.php">home</a>
+<a href="welcome.php" class="btn btn-primary">home</a>
+</body>
