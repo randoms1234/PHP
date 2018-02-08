@@ -7,7 +7,7 @@ $a = scandir($dir);
 // Sort in descending order
 $b = scandir($dir,1);
 
-echo $a[0];
+print_r($a);
 
 
 ?>
