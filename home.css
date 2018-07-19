@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+.hello{
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	color:white;
+}
+body{
+	background-color:#069;	
+}
+
+.reddit{
+	margin-left: 775px;
+}
+.youtube{
+	margin-left:400px;
+	position:absolute;	
+}
+.twitter{
+
+	float: right;
+	margin-right: 400px;	
+}
+.protonmail{
+	margin-left: 315px;
+}
+.search{
+	padding:4px;
+	width:15em;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+}
+.RSS{
+	margin-left: 805px	
+}

@@ -29,12 +29,6 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 		$hello = "";
 		$good = "";
 	}
-	elseif($username == "Gudmondson")
-	{
-		$good = "Are you goose goose?";
-		$helloa = "";
-		$hello = "";
-	}
   	else{
   		$hello = "hello $username";
 		$helloa = "";
@@ -50,6 +44,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
     <meta charset="UTF-8">
     <title>Talk to me Goose</title>
 	<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="home.css"/>
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; 
 			background-color: #324D5C;
@@ -78,16 +73,19 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 	
 
 <p>you have logged in <?php echo $visits[0]; ?> times</p>
-	<a href="webupload2.php" class="btn btn-primary">upload a Webpage</a>
-	<a href="webedit.php" class="btn btn-primary">edit webpage</a>
 	<a href="uploadtest.php" class="btn btn-primary">upload to the server</a>
+	<a href="files.php" class="btn btn-primary">Server Files</a>
 	<hr>
 	<a href="account.php" class="btn btn-primary">Account Information</a>
     <a href="logout.php" class="btn btn-primary">Sign Out</a>
     <br>
     <br>
-	<img src="goose.jpg" class="goose">
-	<img src="pigeon.gif" class="pigeon">
+    <a href="https://mail.protonmail.com/login" class="btn btn-primary">Protonmail</a>
+ 	<a href="https://www.youtube.com" class="btn btn-primary">Youtube</a>
+	<a href="https://www.twitter.com" class="btn btn-primary">Twitter</a>
+	<a href="https://www.reddit.com" class="btn btn-primary">Reddit</a>
+	<br>
+</div>
 	
 </body>
 	

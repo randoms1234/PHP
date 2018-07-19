@@ -29,9 +29,6 @@ else{
 if($username == "Admin"){
 	$button = "#";
 }
-elseif($username == "Gudmondson"){
-	$button = "#";
-}
 else{
 	$button = "delete.php";
 }

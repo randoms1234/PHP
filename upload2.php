@@ -14,6 +14,8 @@ $username = $_SESSION['username'];
 
 	if (move_uploaded_file($_FILES['userfile']['tmp_name'], "$folder".$_FILES['userfile']['name'])){
 		print "Received {$_FILES['userfile']['name']} - its size is {$_FILES['userfile']['size']}";
+		$file = $_FILES['userfile']['name'];
+		chmod($file, 0777);
 	}else{
 		print"Upload Failed!";
 	}

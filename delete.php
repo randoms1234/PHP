@@ -17,6 +17,11 @@ $username = $_SESSION['username'];
 $folder = "./$username/";
 $delete = mysqli_query($connect, "DELETE FROM `users` WHERE username = '$username'");
 mysqli_query($connect, "DELETE FROM `time` WHERE username = '$username'");
+$files = glob($folder . '/*'); // get all file names
+foreach($files as $file){ // iterate files
+  if(is_file($file))
+    unlink($file); // delete file
+}
 rmdir($folder);
 // Unset all of the session variables
 $_SESSION = array();
